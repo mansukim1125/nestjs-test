@@ -47,3 +47,11 @@ model Tag {
   name  String @unique
   posts Post[]
 }
+
+model Weather {
+  city        String   @unique
+  description String
+  temp        Float
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
