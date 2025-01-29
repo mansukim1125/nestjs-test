@@ -7,9 +7,7 @@ export class WeatherController {
   constructor(private readonly weatherService: WeatherService) {}
 
   @Get()
-  async getWeather(@Query('city') city: string): Promise<IWeather> {
-    console.log('weather controller v2');
-
+  getWeather(@Query('city') city: string): IWeather {
     return this.weatherService.getWeather(city);
   }
 }
