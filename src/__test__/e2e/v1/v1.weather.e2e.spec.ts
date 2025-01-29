@@ -1,11 +1,11 @@
 'use strict';
 
-import { createNestApp } from '../../createNestApp';
+import { createNestApp } from '../../../createNestApp';
 
 import * as request from 'supertest';
 import { INestApplication } from '@nestjs/common';
 
-const apiVersion = 'v2';
+const apiVersion = 'v1';
 
 describe(`/${apiVersion}/weather`, () => {
   let app: INestApplication;

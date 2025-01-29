@@ -25,6 +25,8 @@ const weathers = {
 };
 
 router.get('/v1/weather', (req, res, next) => {
+  console.log('weather controller v1');
+  
   const { city } = req.query;
   
   if (!city || city.length < 1) {
