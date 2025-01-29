@@ -8,6 +8,8 @@ export class WeatherController {
 
   @Get()
   async getWeather(@Query('city') city: string): Promise<IWeather> {
+    console.log('weather controller v2');
+
     return this.weatherService.getWeather(city);
   }
 }
